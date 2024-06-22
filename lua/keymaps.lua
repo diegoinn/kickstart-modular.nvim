@@ -48,4 +48,22 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- nvim-comment
+vim.keymap.set({ 'n', 'v' }, '<leader>ç', ':CommentToggle<cr>')
+
+-- movelines keymap
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+
+-- fast delete
+vim.keymap.set('i', '<C-BS>', '<C-w>')
+
+-- fast empty line
+vim.keymap.set('n', '<leader>o', 'o<Esc>')
+vim.keymap.set('n', '<leader>O', 'O<Esc>')
+
+--nice moves
+vim.keymap.set('n', '<C-d>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
+vim.keymap.set('n', 'G', 'Gzz')
 -- vim: ts=2 sts=2 sw=2 et
